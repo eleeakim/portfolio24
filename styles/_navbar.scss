@@ -1,0 +1,64 @@
+.navbar {
+    position: fixed;
+    left: 50%;
+    bottom: 1.5rem;
+    transform: translateX(-50%);
+
+    width: 525px;
+    max-width: 90%;
+    background-color: rgba($text-secondary, 0.1);
+
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: background-color 0.5s ease;
+
+    &.special {
+        background-color: rgba($text-secondary, 0.8);
+
+        a {
+            color: $black;
+
+            &.active {
+                background-color: rgba($text, 1);
+            }
+        }
+    }
+
+    a {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 1rem 1.2rem;
+        border-radius: 8px;
+
+        text-decoration: none;
+        color: $text-secondary;
+
+        transition: color 0.5s ease;
+
+        &.active {
+            background-color: rgba($text-secondary, 0.15);
+            transition: background-color 0.5s ease 0.1s;
+        }
+        
+        .label {
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+        }
+    }
+
+    @include sm {
+        a {
+            .label {
+                display: none;
+            }
+        }
+    }
+}

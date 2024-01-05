@@ -1,0 +1,71 @@
+.about {
+    width: 1200px;
+    max-width: 90%;
+    margin: 1rem auto;
+    display: flex;
+
+    @include sm {
+        flex-direction: column;
+    }
+
+    .biodata {
+        width: 40%;
+
+        @include sm {
+            width: 100%;
+        }
+        
+        .title {
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: $text;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: $text-secondary;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+
+            font-size: 1.3rem;
+            font-weight: 500;
+            border-radius: 5px;
+
+            color: $text-secondary;
+            border: 1px solid $text-secondary;
+        }
+    }
+
+    .text {
+        width: 60%;
+        color: $text-secondary;
+        font-size: 1.2rem;
+
+        @include sm {
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .spotify {
+        margin-top: 2rem;
+        width: 80%;
+
+        filter: grayscale(100%);
+
+        @include sm {
+            width: 100%;
+        }
+    }
+}

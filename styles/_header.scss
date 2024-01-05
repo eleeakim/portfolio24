@@ -1,0 +1,51 @@
+.header {
+    max-width: 90%;
+    width: 1200px;
+    margin: 3.5rem auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+        text-decoration: none;
+        display: inline-block;
+        line-height: 0;
+    }
+
+    img {
+        width: 4rem;
+        border-radius: 100%;
+
+        @include sm {
+            width: 3rem;
+        }
+    }
+
+    .link-list {
+        width: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: $text-secondary;
+
+        a {
+            text-decoration: none;
+            color: $text-secondary;
+        }
+
+        svg {
+            display: none;
+        }
+
+        @include sm {
+            p {
+                display: none;
+            }
+
+            svg {
+                display: block;
+            }
+        }
+    }
+}

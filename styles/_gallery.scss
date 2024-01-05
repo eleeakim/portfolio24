@@ -1,0 +1,62 @@
+.gallery {
+    width: 95%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        text-align: center;
+        font-weight: 500;
+        font-size: 2.5rem;
+    }
+
+    .loader {
+        text-align: center;
+        margin: 10rem 0;
+
+        svg {
+            animation: loader 1.2s infinite cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+    }
+}
+
+.photo-grid, .photo-grid-blog {
+    width: 100%;
+    margin-top: 5rem;
+    column-gap: 0rem;
+    column-count: 3;
+
+    &.loading {
+        visibility: hidden;
+    }
+
+    @include md {
+        column-count: 2;
+    }
+
+    @include sm {
+        column-count: 1;
+    }
+
+    .item {
+        padding: 0.5rem 0.8rem;
+        margin: 0rem;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+}
+
+@keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

@@ -1,0 +1,13 @@
+.email-popup {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1.2rem;
+    border-radius: 50%;
+    background-color: $light-black;
+    color: $light-grey;
+    filter: drop-shadow(4px 6px 10px $grey);
+}
